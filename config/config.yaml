@@ -1,0 +1,18 @@
+base_dir: artifact
+aws:
+  ingestion_path : ${base_dir}/data_ingestion
+  file_name: cc.csv
+  bucket_name: fraud-detect-data-bucket
+  key_filename: creditcard.csv
+data:
+  raw_data_path : ${base_dir}/data_ingestion/creditcard.csv
+  train_data_path: ${base_dir}/data_transformation/X_train.pkl
+  test_data_path: ${base_dir}/data_transformation/X_test.pkl
+  val_data_path: ${base_dir}/data_transformation/X_val.pkl
+  train_label_data_path: ${base_dir}/data_transformation/y_train.pkl
+  test_label_data_path: ${base_dir}/data_transformation/y_test.pkl
+  val_label_data_path: ${base_dir}/data_transformation/y_val.pkl
+  standardize_obj_path: ${base_dir}/data_transformation/standardize_obj.pkl
+  
+model:
+  model_path: ${base_dir}/model_dir/model.pkl
